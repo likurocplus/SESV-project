@@ -48,6 +48,7 @@ const displayLatestTutorials = (dataTutorials) => {
           );
           //set no button if user choose then close modal
           document.getElementById("no-button").addEventListener('click',()=>{
+            //close modal pop-up
             modal.close();
           })
         })
