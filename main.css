@@ -35,5 +35,59 @@ div{
     padding: 0;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
 
+#modal{
+    border: 0px;
+    border-radius: 20px;
+    padding: 0;
+    width: 400px;
+    height: 150px;
+}
+
+#modal-title{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal-title p{
+    margin: 0px 10px 0px 10px;
+}
+
+#modal-button{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50%;
+}
+
+#yes-button{
+    width: 50%;
+    text-align: center;
+    text-decoration: none;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#yes-button-a{
+    text-decoration: none;
+    color: white;
+}
+
+#no-button{
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
