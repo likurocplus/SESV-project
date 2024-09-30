@@ -28,26 +28,34 @@ const getLatestTutorials = async () => {
 //-appendChild Node to div content 
 //output: the list display in screen
 const displayLatestTutorials = (dataTutorials) => {
+
     dataTutorials.forEach((element) => {
-        //create anchor element to contain link and title
+
+        //1. create anchor element to contain link and title
         let titleElement = document.createElement("a");
         let modal = document.getElementById("modal")
-        //set attribute id = lession-title to use css
+
+        //2.set attribute id = lession-title to use css
         titleElement.setAttribute("id", "lession-title");
-        //inner text to anchor
+
+        //3. inner text to anchor
         titleElement.innerText = `${element["node"]["frontmatter"]["title"]}`;
         
-        //add event show modal to titleElement
+        //4. add event show modal to titleElement
         titleElement.addEventListener('click',()=>{
-          //if click point at titleElement then show modal
+
+          //5. if click point at titleElement then show modal
           modal.showModal();
-          //set yes button if user choose then go to SESV lession
+
+          //6. set yes button if user choose then go to SESV lession
           document.getElementById("yes-button-a").setAttribute(
             "href",
             `https://www.sesvtutorial.com${element["node"]["fields"]["slug"]}`
           );
-          //set no button if user choose then close modal
+
+          //7. set no button if user choose then close modal
           document.getElementById("no-button").addEventListener('click',()=>{
+
             //close modal pop-up
             modal.close();
           })
