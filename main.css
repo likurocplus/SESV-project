@@ -9,15 +9,14 @@ body{
     width: 100%;
     background-attachment: fixed;
 }
+
 div{
     width: 50%;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* position: fixed; */
 }
 
 #content {
-    /* width: 100%; */
     height: auto;
     display: flex;
     flex-direction: column;
@@ -26,11 +25,11 @@ div{
 #lession-title {
     background-color: black;
     opacity: 50%;
-    border: 2px solid black;
-    border-radius: 20px;
-    font-size: 20px;
+    border: 0.125rem solid black; 
+    border-radius: 1.25rem; 
+    font-size: 1.25rem; 
     text-decoration: none;
-    margin: 10px 0px 10px 0px;
+    margin: 0.625rem 0;
     color: white;
     padding: 0;
     text-align: center;
@@ -38,16 +37,16 @@ div{
     cursor: pointer;
 }
 
-#modal{
-    border: 0px;
-    border-radius: 20px;
+#modal {
+    border: 0;
+    border-radius: 1.25rem;
     padding: 0;
-    font-size: 20px;
-    width: 20rem;
-    height: 10rem;
+    font-size: 1.25rem;
+    width: 20rem; 
+    height: 9.375rem; 
 }
 
-#modal-title{
+#modal-title {
     width: 100%;
     height: 50%;
     display: flex;
@@ -55,18 +54,18 @@ div{
     align-items: center;
 }
 
-#modal-title p{
-    margin: 0px 10px 0px 10px;
+#modal-title p {
+    margin: 0 0.625rem;
 }
 
-#modal-button{
+#modal-button {
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 50%;
 }
 
-#yes-button{
+#yes-button {
     width: 50%;
     text-align: center;
     text-decoration: none;
@@ -77,12 +76,12 @@ div{
     cursor: pointer;
 }
 
-#yes-button-a{
+#yes-button-a {
     text-decoration: none;
     color: white;
 }
 
-#no-button{
+#no-button {
     width: 50%;
     text-align: center;
     cursor: pointer;
