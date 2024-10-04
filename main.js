@@ -9,7 +9,7 @@
 const getLatestTutorials = async () => {
     //fetch API
   let response = await fetch(
-    "https://www.sesvtutorial.com/page-data/tutorials/page-data.json"
+    "https://mocki.io/v1/2f27ece2-ff49-4c13-bba1-3901e2a29c99" //fake API JSON
   );
   //convert resp to Object
   let resultObject = await response.json();
