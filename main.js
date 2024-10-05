@@ -7,15 +7,22 @@
 //- call display func
 //output: the list display in screen
 const getLatestTutorials = async () => {
-    //fetch API
+    //1/fetch API
+    //The original API is https://www.sesvtutorial.com/page-data/tutorials/page-data.json. Since fetching this API using the Fetch API causes a CORS error, there are two ways to fix this:
+    //    1. Disabling CORS on the client-side, but this is very inconvenient because not everyone wants to disable it.
+    //    2. Fixing it on the server-side. However, since this API belongs to SESV, I don't have the permissions to modify the server.
+    //Therefore, I created a fake server to fetch SESV data and fetch the data back from this fake server to resolve the CORS issue.
   let response = await fetch(
     "https://mocki.io/v1/2f27ece2-ff49-4c13-bba1-3901e2a29c99" //fake API JSON
   );
-  //convert resp to Object
+    
+  //2/convert resp to Object
   let resultObject = await response.json();
-  //get data latest tutorials of Object
+    
+  //3/get data latest tutorials of Object
   let dataTutorials = resultObject["result"]["data"]["posts"]["edges"];
-  //call display func
+    
+  //4/call display func
   displayLatestTutorials(dataTutorials);
 };
 
