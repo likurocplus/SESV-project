@@ -8,12 +8,10 @@
 //output: the list display in screen
 const getLatestTutorials = async () => {
     //1/fetch API
-    //The original API is https://www.sesvtutorial.com/page-data/tutorials/page-data.json. Fetch it return a CORS error., there are two ways to fix this:
+    //The original API is https://www.sesvtutorial.com/page-data/tutorials/page-data.json. Fetch it return a CORS error because missing Access-Control-Allow-Origin Header from the origin Server, there are two ways to fix this:
     //    1. Disabling CORS on the client-side, but this is very inconvenient because not everyone wants to disable it.
     //    2. Fixing it on the server-side. However, since this API belongs to SESV, I don't have the permissions to modify the server.
-    // Therefore, I created a fake server to fetch SESV data(Servers are not bound by CORS (CORS is just a security measure applied by browsers to protect users, and only browsers follow CORS). Therefore, from another server, we can fetch the API and configure 
-    // the fake server to set the Access-Control-Allow-Origin header so that the browser can proceed.) 
-    // and fetch the data back from this fake server to resolve the CORS issue.
+    // Therefore, I created a fake server to fetch SESV data(Servers are not bound by CORS (CORS is just a security measure applied by browsers to protect users, and only browsers follow CORS). Therefore, from another server, we can fetch the API and configure the fake server to set the Access-Control-Allow-Origin header so that the browser can proceed.) and fetch the data back from this fake server to resolve the CORS issue.
   let response = await fetch(
     "https://mocki.io/v1/2f27ece2-ff49-4c13-bba1-3901e2a29c99" //fake API JSON
   );
